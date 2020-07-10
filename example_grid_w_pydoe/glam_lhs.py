@@ -12,7 +12,7 @@ w0      = [-1.5, -0.5]
 
 # generate the parameters between 0 and 1
 n_parameters = 6
-n_cosmologies = 100 
+n_cosmologies = 200 
 
 # criterion='maximin': maximize the minimum distance between points, but place the point in a randomized location within its interval
 grid_maximin = lhs(n_parameters, samples = n_cosmologies, criterion='maximin')
