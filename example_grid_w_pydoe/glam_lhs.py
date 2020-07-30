@@ -11,12 +11,12 @@ ns      = [0.85, 1.00]
 #wa      = [-1.5, 1.15] # 
 
 # Euclid emulator : 3 sigma from Planck => move to 7 sigma
-ωb ∈ [0.0215, 0.0235] ,
-ωm ∈ [0.1306, 0.1546] ,
-ns ∈ [0.9283, 1.0027] ,
-h ∈ [0.6155, 0.7307] ,
-# w0 ∈ [−1.30, −0.70] ,
-σ8 ∈ [0.7591, 0.8707] .
+omega_m = [0.1306, 0.1546]
+omega_b = [0.0215, 0.0235]
+sigma_8 = [0.7591, 0.8707]
+h       = [0.6155, 0.7307]
+ns      = [0.9283, 1.0027]
+w0 ∈ [−1.30, −0.70] ,
 
 # eROSITA statistics :
 # 100,000 cluster for mass M>2 \times 10^14Msun 
@@ -30,7 +30,7 @@ h ∈ [0.6155, 0.7307] ,
 
 # generate the parameters between 0 and 1
 n_parameters = 5
-n_cosmologies = 20 
+n_cosmologies = 200 
 
 # criterion='maximin': maximize the minimum distance between points, but place the point in a randomized location within its interval
 grid_maximin = lhs(n_parameters, samples = n_cosmologies, criterion='maximin')
