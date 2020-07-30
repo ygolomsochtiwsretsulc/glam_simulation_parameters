@@ -4,15 +4,33 @@ import numpy as n
 # set of parameters
 omega_m = [0.08, 0.17] 
 omega_b = [0.021, 0.024]
-sigma_8 = [0.6, 1.0] 
+sigma_8 = [0.7, 1.0] 
 h       = [0.5, 0.9] 
-ns      = [0.85, 1.05]
-#w0      = [-1.5, -0.5] 
+ns      = [0.85, 1.00]
+#w0      = [-1.5, -0.5], w = -1
 #wa      = [-1.5, 1.15] # 
+
+# Euclid emulator : 3 sigma from Planck => move to 7 sigma
+ωb ∈ [0.0215, 0.0235] ,
+ωm ∈ [0.1306, 0.1546] ,
+ns ∈ [0.9283, 1.0027] ,
+h ∈ [0.6155, 0.7307] ,
+# w0 ∈ [−1.30, −0.70] ,
+σ8 ∈ [0.7591, 0.8707] .
+
+# eROSITA statistics :
+# 100,000 cluster for mass M>2 \times 10^14Msun 
+# volume 55 Gpc^3
+# more to M>1e13
+# smaller volume
+# Prediction of expected number of eROSITA cluster per bin of redshift per bin of mass. 
+# We deduce accuracy from that
+# add cosmology dependence with colossus on these numbers 
+
 
 # generate the parameters between 0 and 1
 n_parameters = 5
-n_cosmologies = 200 
+n_cosmologies = 20 
 
 # criterion='maximin': maximize the minimum distance between points, but place the point in a randomized location within its interval
 grid_maximin = lhs(n_parameters, samples = n_cosmologies, criterion='maximin')
